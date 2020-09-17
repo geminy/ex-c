@@ -1,0 +1,9 @@
+./testaddr
+test main begin
+浮点数例外 (核心已转储)
+
+dmesg | grep testaddr
+[674793.881324] traps: testaddr[14402] trap divide error ip:400551 sp:7ffd858cb1f0 error:0 in testaddr[400000+1000]
+
+addr2line -e testaddr 400551
+/xxx/aidear/snippets/cppfunc/addr2line/test.c:10

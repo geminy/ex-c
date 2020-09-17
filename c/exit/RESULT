@@ -1,0 +1,28 @@
+# return 0
+init [constructor]
+main [begin]
+atexit(for_exit) 0
+atexit(for_exit2) 0
+main [end]
+main [return 0]
+for_exit2 [atexit]
+for_exit [atexit]
+final [destructor]
+# exit(0)
+init [constructor]
+main [begin]
+atexit(for_exit) 0
+atexit(for_exit2) 0
+main [end]
+main [exit(0)]
+for_exit2 [atexit]
+for_exit [atexit]
+final [destructor]
+# _exit(0)
+init [constructor]
+main [begin]
+atexit(for_exit) 0
+atexit(for_exit2) 0
+main [end]
+main [_exit(0)]
+# _Exit(0)

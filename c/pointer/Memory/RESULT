@@ -1,0 +1,66 @@
+Using simple copy
+Common::Common
+BitCopy::BitCopy
+BitCopy::~BitCopy
+Common::~Common
+BitCopy::~BitCopy
+Common::~Common
+*** Error in `./Memory': double free or corruption (fasttop): 0x0000000001f4e010 ***
+已放弃 (核心已转储)
+
+
+Using deep copy
+Common::Common
+ValueCopy::ValueCopy
+Common::Common copy-constructor
+ValueCopy::ValueCopy copy-constructor
+ValueCopy::~ValueCopy
+Common::~Common
+ValueCopy::~ValueCopy
+Common::~Common
+
+
+Using reference count
+A::A
+B::B
+B::B copy-constructor
+A::attach
+B::~B
+A::detach 2
+B::~B
+A::detach 1
+A::~A
+
+
+Creating Dog: [Fido], rc = 1
+Created DogHouse: [FidoHouse] contains [Fido], rc = 1
+Creating Dog: [Spot], rc = 1
+Created DogHouse: [SpotHouse] contains [Spot], rc = 1
+Entering copy-construction
+Attached Dog: [Fido], rc = 2
+DogHouse copy-constructor: [copy-constructed FidoHouse] contains [Fido], rc = 2
+After copy-construction bobs
+fidos: [FidoHouse] contains [Fido], rc = 2
+spots: [SpotHouse] contains [Spot], rc = 1
+bobs: [copy-constructed FidoHouse] contains [Fido], rc = 2
+Entering spots = fidos
+Detaching Dog: [Spot], rc = 1
+Deleting Dog: [Spot], rc = 0
+Attached Dog: [Fido], rc = 3
+DogHouse operator=  : [FidoHouse assigned] contains [Fido], rc = 3
+After spots = fidos
+Entering self-assignment
+bobs: [copy-constructed FidoHouse] contains [Fido], rc = 3
+Entering rename("Bob")
+Unaliasing Dog: [Fido], rc = 3
+Dog copy-constructor: [Fido copy], rc = 1
+Dog renamed to: [Bob], rc = 1
+After rename("Bob")
+DogHouse destructor: [copy-constructed FidoHouse] contains [Bob], rc = 1
+Detaching Dog: [Bob], rc = 1
+Deleting Dog: [Bob], rc = 0
+DogHouse destructor: [FidoHouse assigned] contains [Fido], rc = 2
+Detaching Dog: [Fido], rc = 2
+DogHouse destructor: [FidoHouse] contains [Fido], rc = 1
+Detaching Dog: [Fido], rc = 1
+Deleting Dog: [Fido], rc = 0

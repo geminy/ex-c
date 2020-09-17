@@ -1,0 +1,28 @@
+./a.out() [0x400811]
+./a.out() [0x400baf]
+./a.out() [0x400bba]
+./a.out() [0x400bc5]
+/lib/x86_64-linux-gnu/libc.so.6(__libc_start_main+0xf5) [0x7f2473cf5ec5]
+./a.out() [0x400709]
+----------done----------
+./a.out(_Z12my_backtracev+0x44) [0x400b11]
+./a.out(_Z5func2v+0x9) [0x400eaf]
+./a.out(_Z4funcv+0x9) [0x400eba]
+./a.out(main+0x9) [0x400ec5]
+/lib/x86_64-linux-gnu/libc.so.6(__libc_start_main+0xf5) [0x7f006bdfbec5]
+./a.out() [0x400a09]
+----------done----------
+./a.out() [0x4008e4]
+./a.out() [0x400baf]
+./a.out() [0x400bba]
+./a.out() [0x400bc5]
+/lib/x86_64-linux-gnu/libc.so.6:__libc_start_main()+0xf5
+./a.out() [0x400709]
+----------done----------
+./a.out:my_backtrace2()+0x44
+./a.out:func2()+0x9
+./a.out:func()+0x9
+./a.out:main()+0x9
+/lib/x86_64-linux-gnu/libc.so.6:__libc_start_main()+0xf5
+./a.out() [0x400a09]
+----------done----------

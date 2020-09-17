@@ -1,2 +1,2 @@
-# ex-c-
-Exercise for c++.
+# ex-c
+Exercise for c/c++.

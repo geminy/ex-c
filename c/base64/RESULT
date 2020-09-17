@@ -1,0 +1,13 @@
+[1]A > [4]QQ==
+[2]AB > [4]QUI=
+[3]ABC > [4]QUJD
+[4]ABCA > [8]QUJDQQ==
+[5]ABCAB > [8]QUJDQUI=
+[6]ABCABC > [8]QUJDQUJD
+------------------
+[4]QQ== > [1]A
+[4]QUI= > [2]AB
+[4]QUJD > [3]ABC
+[8]QUJDQQ== > [4]ABCA
+[8]QUJDQUI= > [5]ABCAB
+[8]QUJDQUJD > [6]ABCABC

@@ -1,0 +1,6 @@
+gcc attribute
+
+ __attribute__((constructor))
+ __attribute__((destructor))
+ adapts to .c non .cpp
+ gcc or g++
